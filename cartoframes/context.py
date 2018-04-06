@@ -261,13 +261,26 @@ class CartoContext(object):
             DataFrame has more than 100,000 rows, a :obj:`BatchJobStatus`
             instance is returned. Otherwise, None.
 
+        Raises:
+            ImportError: If `df` is a pyarrow Table and pyarrow is not
+              installed
+
         .. note::
             DataFrame indexes are changed to ordinary columns. CARTO creates
             an index called `cartodb_id` for every table that runs from 1 to
             the length of the DataFrame.
         """  # noqa
-        # work on a copy to avoid changing the original
-        _df = df.copy()
+        if isinstance(df, pd.DataFrame):
+            # work on a copy to avoid changing the original
+            _df = df.copy()
+        else:
+            # convert to DataFrame
+            try:
+                import pyarrow as pa
+                _df = pa.Table.from_pandas(df)
+            except ModuleNotFoundError as err:
+                raise ImportError('Install pyarrow for Apache Arrow support')
+
         if not os.path.exists(temp_dir):
             self._debug_print(temp_dir='creating directory at ' + temp_dir)
             os.makedirs(temp_dir)
