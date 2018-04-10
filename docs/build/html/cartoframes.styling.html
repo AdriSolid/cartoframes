@@ -1,0 +1,414 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>cartoframes.styling module &#8212; cartoframes 0.6.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">cartoframes 0.6.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-cartoframes.styling">
+<span id="cartoframes-styling-module"></span><h1>cartoframes.styling module<a class="headerlink" href="#module-cartoframes.styling" title="Permalink to this headline">¶</a></h1>
+<p>Styling module that exposes CARTOColors schemes. Read more about CARTOColors
+in its <a class="reference external" href="https://github.com/Carto-color/">GitHub repository</a>.</p>
+<a class="reference internal image-reference" href="https://cloud.githubusercontent.com/assets/1566273/21021002/fc9df60e-bd33-11e6-9438-d67951a7a9bf.png"><img alt="CARTOColors" src="https://cloud.githubusercontent.com/assets/1566273/21021002/fc9df60e-bd33-11e6-9438-d67951a7a9bf.png" style="width: 700px;" /></a>
+<dl class="class">
+<dt id="cartoframes.styling.BinMethod">
+<em class="property">class </em><code class="descclassname">cartoframes.styling.</code><code class="descname">BinMethod</code><a class="headerlink" href="#cartoframes.styling.BinMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Data classification methods used for the styling of data on maps.</p>
+<dl class="attribute">
+<dt id="cartoframes.styling.BinMethod.quantiles">
+<code class="descname">quantiles</code><a class="headerlink" href="#cartoframes.styling.BinMethod.quantiles" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>str</em> – Quantiles classification for quantitative data</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cartoframes.styling.BinMethod.jenks">
+<code class="descname">jenks</code><a class="headerlink" href="#cartoframes.styling.BinMethod.jenks" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>str</em> – Jenks classification for quantitative data</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cartoframes.styling.BinMethod.headtails">
+<code class="descname">headtails</code><a class="headerlink" href="#cartoframes.styling.BinMethod.headtails" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>str</em> – Head/Tails classification for quantitative data</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cartoframes.styling.BinMethod.equal">
+<code class="descname">equal</code><a class="headerlink" href="#cartoframes.styling.BinMethod.equal" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>str</em> – Equal Interval classification for quantitative data</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cartoframes.styling.BinMethod.category">
+<code class="descname">category</code><a class="headerlink" href="#cartoframes.styling.BinMethod.category" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>str</em> – Category classification for qualitative data</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="cartoframes.styling.BinMethod.mapping">
+<code class="descname">mapping</code><a class="headerlink" href="#cartoframes.styling.BinMethod.mapping" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>dict</em> – The TurboCarto mappings</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">category</code><em class="property"> = 'category'</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">equal</code><em class="property"> = 'equal'</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">headtails</code><em class="property"> = 'headtails'</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">jenks</code><em class="property"> = 'jenks'</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">mapping</code><em class="property"> = {'category': '=', 'equal': '&gt;', 'headtails': '&lt;', 'jenks': '&gt;', 'quantiles': '&gt;'}</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">quantiles</code><em class="property"> = 'quantiles'</em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.antique">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">antique</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='category'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.antique" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Antique qualitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.armyRose">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">armyRose</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.armyRose" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors ArmyRose divergent quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.bluGrn">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">bluGrn</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.bluGrn" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors BluGrn quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.bluYl">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">bluYl</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.bluYl" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors BluYl quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.bold">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">bold</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='category'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.bold" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Bold qualitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.brwnYl">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">brwnYl</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.brwnYl" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors BrwnYl quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.burg">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">burg</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.burg" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Burg quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.burgYl">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">burgYl</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.burgYl" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors BurgYl quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.custom">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">custom</code><span class="sig-paren">(</span><em>colors</em>, <em>bins=None</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.custom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a custom scheme.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>colors</strong> (<em>list of str</em>) – List of hex values for styling data</li>
+<li><strong>bins</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of bins to style by. If not given, the
+number of colors will be used.</li>
+<li><strong>bin_method</strong> (<em>str</em><em>, </em><em>optional</em>) – Classification method. One of the values
+in <a class="reference internal" href="#cartoframes.styling.BinMethod" title="cartoframes.styling.BinMethod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BinMethod</span></code></a>. Defaults to <cite>quantiles</cite>, which only works with
+quantitative data.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.darkMint">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">darkMint</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.darkMint" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors DarkMint quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.earth">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">earth</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.earth" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Earth divergent quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.emrld">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">emrld</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.emrld" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Emrld quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.fall">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">fall</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.fall" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Fall divergent quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.get_scheme_cartocss">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">get_scheme_cartocss</code><span class="sig-paren">(</span><em>column</em>, <em>scheme_info</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.get_scheme_cartocss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get TurboCARTO CartoCSS based on input parameters</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.geyser">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">geyser</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.geyser" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Geyser divergent quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.magenta">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">magenta</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.magenta" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Magenta quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.mint">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">mint</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.mint" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Mint quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.orYel">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">orYel</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.orYel" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors OrYel quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.pastel">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">pastel</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='category'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.pastel" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Pastel qualitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.peach">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">peach</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.peach" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Peach quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.pinkYl">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">pinkYl</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.pinkYl" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors PinkYl quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.prism">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">prism</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='category'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.prism" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Prism qualitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.purp">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">purp</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.purp" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Purp quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.purpOr">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">purpOr</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.purpOr" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors PurpOr quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.redOr">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">redOr</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.redOr" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors RedOr quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.safe">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">safe</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='category'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.safe" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Safe qualitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.scheme">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">scheme</code><span class="sig-paren">(</span><em>name</em>, <em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.scheme" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a custom scheme based on CARTOColors.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>str</em>) – Name of a CARTOColor.</li>
+<li><strong>bins</strong> (<em>int</em><em> or </em><em>iterable</em>) – If an <cite>int</cite>, the number of bins for classifying
+data. CARTOColors have 7 bins max for quantitative data, and 11 max
+for qualitative data. If <cite>bins</cite> is a <cite>list</cite>, it is the upper range
+for classifying data. E.g., <cite>bins</cite> can be of the form <code class="docutils literal notranslate"><span class="pre">(10,</span> <span class="pre">20,</span> <span class="pre">30,</span>
+<span class="pre">40,</span> <span class="pre">50)</span></code>.</li>
+<li><strong>bin_method</strong> (<em>str</em><em>, </em><em>optional</em>) – One of methods in <a class="reference internal" href="#cartoframes.styling.BinMethod" title="cartoframes.styling.BinMethod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BinMethod</span></code></a>.
+Defaults to <code class="docutils literal notranslate"><span class="pre">quantiles</span></code>. If <cite>bins</cite> is an interable, then that is
+the bin method that will be used and this will be ignored.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Input types are particularly sensitive in this function, and little
+feedback is given for errors. <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">bin_method</span></code> arguments
+are case-sensitive.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.sunset">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">sunset</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.sunset" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Sunset quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.sunsetDark">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">sunsetDark</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.sunsetDark" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors SunsetDark quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.teal">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">teal</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.teal" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Teal quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.tealGrn">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">tealGrn</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.tealGrn" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors TealGrn quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.tealRose">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">tealRose</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.tealRose" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors TealRose divergent quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.temps">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">temps</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.temps" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Temps divergent quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.tropic">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">tropic</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='quantiles'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.tropic" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Tropic divergent quantitative scheme</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cartoframes.styling.vivid">
+<code class="descclassname">cartoframes.styling.</code><code class="descname">vivid</code><span class="sig-paren">(</span><em>bins</em>, <em>bin_method='category'</em><span class="sig-paren">)</span><a class="headerlink" href="#cartoframes.styling.vivid" title="Permalink to this definition">¶</a></dt>
+<dd><p>CARTOColors Vivid qualitative scheme</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/cartoframes.styling.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">cartoframes 0.6.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Andy Eschbacher, Stuart Lynn.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.2.
+    </div>
+  </body>
+</html>
